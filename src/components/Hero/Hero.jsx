@@ -1,8 +1,9 @@
-import Section from "./Section";
+import Section from "../Section";
+import css from "./Hero.module.css";
 
 const Hero = () => {
   return (
-    <Section>
+    <Section cssClasses={[css.heroSection, css.overlay]}>
       <div>
         <p>
           <span>7</span>Days

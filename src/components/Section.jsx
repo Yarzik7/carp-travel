@@ -1,8 +1,10 @@
 import Container from "./Container";
 
-const Section = ({ children }) => {
+const Section = ({ cssClasses=[], children }) => {
+  const classNames = ["section", ...cssClasses];
+
   return (
-    <section>
+    <section className={classNames.join(" ")}>
       <Container>{children}</Container>
     </section>
   );
