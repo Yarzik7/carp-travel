@@ -4,7 +4,7 @@ const navList = ["About", "Services", "Career", "Gallery", "Contacts"];
 
 const renderNav = (item, idx) => {
   return (
-    <li key={idx} className="py-8 text-sm">
+    <li key={idx} className="py-[34px] text-sm">
       {item}
     </li>
   );

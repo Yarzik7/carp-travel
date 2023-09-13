@@ -3,9 +3,9 @@ import logo from "../../public/Rectangle.png";
 
 const Logo = () => {
   return (
-    <div>
-      <Image className="w-14" src={logo} alt="logo" />
-      <span className="text-sm">CarpTravel</span>
+    <div className="py-[36px]">
+      <Image className="mb-[2px] w-[59px]" src={logo} alt="logo" />
+      <p className="text-[14px] tracking-[2.59px] leading-none">CarpTravel</p>
     </div>
   );
 };
