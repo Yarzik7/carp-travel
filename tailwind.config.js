@@ -17,6 +17,9 @@ module.exports = {
       mobile: "320px",
       tablet: "768px",
       desktop: "1280px",
+      sm: "320px",
+      md: "768px",
+      lg: "1280px",
     },
     colors: {
       transparent: "transparent",
@@ -52,6 +55,7 @@ module.exports = {
     spacing: {
       "53px": "53px",
       "113px": "113px",
+      "": "",
     },
   },
   plugins: [],
