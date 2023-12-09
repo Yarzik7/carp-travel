@@ -6,7 +6,7 @@ import css from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className={css.header}>
+    <header className="absolute w-full bg-transparent">
       <Container containerClasses={[css.headerContainer]}>
         <Logo />
         <Navigation />

@@ -1,19 +1,30 @@
 import css from "./Navigation.module.css";
+import Link from "next/link";
 
-const navList = ["About", "Services", "Career", "Gallery", "Contacts"];
+const navList = [
+  { caption: "About", href: "#about" },
+  { caption: "Services", href: "#services" },
+  { caption: "Career", href: "#career" },
+  { caption: "Gallery", href: "#gallery" },
+  { caption: "Contacts", href: "#contacts" },
+];
 
-const renderNav = (item, idx) => {
+const renderNav = ({ caption, href }, idx) => {
   return (
-    <li key={idx} className="py-[34px] text-sm">
-      {item}
+    <li key={idx} className="">
+      <Link href={href} className="py-[34px]">
+        {caption}
+      </Link>
     </li>
   );
 };
 
 const Navigation = () => {
   return (
-    <nav className="hidden tablet:block">
-      <ul className="flex gap-14">{navList.map(renderNav)}</ul>
+    <nav className="hidden md:block">
+      <ul className="flex gap-[24px] lg:gap-[56px]">
+        {navList.map(renderNav)}
+      </ul>
     </nav>
   );
 };

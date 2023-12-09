@@ -14,8 +14,8 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="mb-[24px]">
-          <h1 className="mb-[24px] font-thin -tracking-[1.6px] uppercase text-[40px] md:mb-[68px] md:w-[426px] md:text-[67px] lg:mb-[148px] lg:w-[646px] lg:text-[98px]">
+        <div className="flex flex-col gap-[24px] mb-[24px]">
+          <h1 className="font-thin -tracking-[1.6px] uppercase text-[40px] md:mb-[68px] md:w-[426px] md:text-[67px] lg:mb-[148px] lg:w-[646px] lg:text-[98px]">
             <span className="font-medium">Uncover</span> Carpathian’s Secrets
           </h1>
 
@@ -24,14 +24,16 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="w-full self-end md:w-[230px] lg:[294px]">
+        {/* <div className="w-full self-end md:w-[230px] lg:[294px]">
           <p className="mb-[24px] text-justify font-extralight leading-[1.42]">
-            We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!
+            We offer you unforgettable trips to the most beautiful parts of the
+            Carpathians. Enjoy stunning views, exciting expeditions, and the
+            best service!
           </p>
           <button className="uppercase text-18px flex justify-center items-center font-bold w-full h-53px bg-bgButton">
             Join now
           </button>
-        </div>
+        </div> */}
       </div>
     </Section>
   );
