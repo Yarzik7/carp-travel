@@ -29,6 +29,7 @@ module.exports = {
       silver: "#ecebff",
       bermuda: "#78dcca",
       bgButton: "rgba(255, 255, 255, 0.10)",
+      textColor: "#fff",
     },
     letterSpacing: {
       "9.48px": "9.48px",
