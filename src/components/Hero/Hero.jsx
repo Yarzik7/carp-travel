@@ -24,7 +24,7 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* <div className="w-full self-end md:w-[230px] lg:[294px]">
+        <div className="w-full self-end md:w-[230px] lg:[294px]">
           <p className="mb-[24px] text-justify font-extralight leading-[1.42]">
             We offer you unforgettable trips to the most beautiful parts of the
             Carpathians. Enjoy stunning views, exciting expeditions, and the
@@ -33,7 +33,7 @@ const Hero = () => {
           <button className="uppercase text-18px flex justify-center items-center font-bold w-full h-53px bg-bgButton">
             Join now
           </button>
-        </div> */}
+        </div>
       </div>
     </Section>
   );
