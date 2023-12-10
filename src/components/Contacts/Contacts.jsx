@@ -1,22 +1,30 @@
 import Section from "../Section";
 import Title from "../Title/Title";
+import ContactBlock from "./ContactBlock/ContactBlock";
+import Form from "../Form/Form";
+import Input from "../Form/Input/Input";
+import { phones, emails, socials } from "@/data/contacts";
 import css from "./Contacts.module.css";
 
 const Contacts = () => {
   return (
     <Section sectionClasses={[css.contactsBgImg]}>
       <Title normalPart="Contact" boldPart="us" />
-
-      <div className="flex mt-[36px] gap-[20px] justify-end">
-        <div>
-          <p className="leading-[1.71]">+38 (098) 12 34 567</p>
-          <p className="leading-[1.71]">+38 (073) 12 34 567</p>
-        </div>
-
-        <p className="text-[12px] font-extralight leading-[1.67]">
-          Phone number
-        </p>
-      </div>
+      <address className="mt-[36px]">
+        <ContactBlock contactsList={phones} label="Phone number" />
+        <ContactBlock contactsList={emails} label="E-mail" />
+        <ContactBlock contactsList={socials} label="Follow us" rowReverse />
+      </address>
+      <Form>
+        <Input label="Full name" name="name" placeholder="John Smith" />
+        <Input
+          label="E-mail"
+          name="email"
+          type="email"
+          placeholder="johnsmith@email.com"
+        />
+        <Input label="Message" name="message" type="textarea" />
+      </Form>
     </Section>
   );
 };

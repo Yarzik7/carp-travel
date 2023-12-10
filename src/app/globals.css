@@ -39,6 +39,10 @@ body {
   color: var(--white-color);
 }
 
+address {
+  font-style: normal;
+}
+
 .section-background {
   background-size: cover;
   background-repeat: no-repeat;
