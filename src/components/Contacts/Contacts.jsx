@@ -16,7 +16,13 @@ const Contacts = () => {
           <ContactBlock contactsList={emails} label="E-mail" />
         </div>
 
-        <ContactBlock contactsList={socials} label="Follow us" rowReverse />
+        <ContactBlock
+          contactsList={socials}
+          label="Follow us"
+          className=""
+          listClassName=""
+          labelClassName=""
+        />
       </address>
       <Form className="flex flex-col gap-[24px]">
         <div className="flex flex-col gap-[24px]">
