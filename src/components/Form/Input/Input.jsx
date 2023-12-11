@@ -11,7 +11,7 @@ const Input = ({
 }) => {
   const inputId = useId();
   return (
-    <>
+    <div className="w-full relative">
       {label && (
         <label
           htmlFor={inputId}
@@ -41,7 +41,7 @@ const Input = ({
           className="w-full h-[193px] px-[8px] text-[13px] font-extralight leading-[1.85] opacity-20 resize-none text-midnight"
         ></textarea>
       )}
-    </>
+    </div>
   );
 };
 
