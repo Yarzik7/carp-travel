@@ -10,7 +10,7 @@ const Contacts = () => {
   return (
     <Section sectionClasses={[css.contactsBgImg]}>
       <Title normalPart="Contact" boldPart="us" />
-      <div className="flex flex-col gap-[12px] mt-[36px] md:gap-[64px] lg:flex-row lg:gap-[231px] lg:mt-[71px]">
+      <div className="flex flex-col gap-[12px] mt-[36px] md:gap-[64px] lg:pl-[83px] lg:flex-row lg:gap-[231px] lg:mt-[71px]">
         <address className="flex flex-col gap-[26px] mdOnly:flex-row md:gap-[90px]">
           <div className="flex flex-col gap-[24px] md:w-[322px]">
             <ContactBlock contactsList={phones} label="Phone number" />
@@ -27,9 +27,9 @@ const Contacts = () => {
             />
           </div>
         </address>
-        <Form className="">
+        <Form className="lg:w-full">
           <div className="flex flex-col gap-[24px] mdOnly:flex-row md:gap-[24px]">
-            <div className="flex beforeLg:flex-col gap-[24px] md:w-[221px]">
+            <div className="flex beforeLg:flex-col gap-[24px] mdOnly:w-[221px]">
               <Input label="Full name" name="name" placeholder="John Smith" />
               <Input
                 label="E-mail"

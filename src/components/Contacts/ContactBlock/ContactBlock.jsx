@@ -18,7 +18,7 @@ const ContactBlock = ({
           <li key={idx} className="">
             <Link
               href={href}
-              className="leading-[1.71] text-right md:text-[16px] md:leading-[1.5]"
+              className="leading-[1.71] text-right md:text-[16px] md:leading-[1.5] lg:text-[18px]"
             >
               {text}
             </Link>
