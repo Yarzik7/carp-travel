@@ -20,6 +20,9 @@ module.exports = {
       sm: "320px",
       md: "768px",
       lg: "1280px",
+      mdOnly: { min: "768px", max: "1279px" },
+      smOnly: { max: "767px" },
+      beforeLg: { max: "1279px" },
     },
     colors: {
       transparent: "transparent",

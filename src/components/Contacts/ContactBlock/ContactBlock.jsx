@@ -8,11 +8,18 @@ const ContactBlock = ({
   labelClassName,
 }) => {
   return (
-    <div className={`flex gap-[20px] ${className}`}>
-      <ul className={`w-2/3 text-right ${listClassName}`}>
+    <div className={`flex gap-[20px] md:justify-end ${className ?? ""}`}>
+      <ul
+        className={`smOnly:w-[66%] text-right md:w-[73.5%] ${
+          listClassName ?? ""
+        }`}
+      >
         {contactsList.map(({ text, href }, idx) => (
           <li key={idx} className="">
-            <Link href={href} className="leading-[1.71] text-right">
+            <Link
+              href={href}
+              className="leading-[1.71] text-right md:text-[16px] md:leading-[1.5]"
+            >
               {text}
             </Link>
           </li>
@@ -20,7 +27,9 @@ const ContactBlock = ({
       </ul>
 
       <p
-        className={`w-1/3 marker:text-[12px] font-extralight leading-[1.67] ${labelClassName}`}
+        className={`smOnly:w-[34%] text-[12px] font-extralight leading-[1.67] md:w-[26.5%] ${
+          labelClassName ?? ""
+        }`}
       >
         {label}
       </p>
