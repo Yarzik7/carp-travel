@@ -1,3 +1,4 @@
+"use client";
 import Section from "../Section";
 import Title from "../Title/Title";
 import ContactBlock from "./ContactBlock/ContactBlock";
@@ -5,8 +6,19 @@ import Form from "../Form/Form";
 import Input from "../Form/Input/Input";
 import { phones, emails, socials } from "@/data/contacts";
 import css from "./Contacts.module.css";
+import { useForm } from "react-hook-form";
 
 const Contacts = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: "onTouched",
+  });
+
+  const onSubmit = (data) => console.log(data);
+
   return (
     <Section sectionClasses={[css.contactsBgImg]}>
       <Title normalPart="Contact" boldPart="us" />
@@ -22,24 +34,50 @@ const Contacts = () => {
               contactsList={socials}
               label="Follow us"
               className="beforeLg:flex-row-reverse"
-              listClassName="mdOnly:text-left mdOnly:w-[80%]"
-              labelClassName="mdOnly:w-[20%]"
+              listClassName="mdOnly:w-[80%] beforeLg:text-left"
+              labelClassName="smOnly:text-right mdOnly:w-[20%]"
+              revers
             />
           </div>
         </address>
-        <Form className="lg:w-full">
+
+        <Form className="lg:w-full" onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col gap-[24px] mdOnly:flex-row md:gap-[24px]">
             <div className="flex beforeLg:flex-col gap-[24px] mdOnly:w-[221px]">
-              <Input label="Full name" name="name" placeholder="John Smith" />
+              <Input
+                label="Full name"
+                name="name"
+                placeholder="John Smith"
+                register={{
+                  ...register("name", {
+                    required: true,
+                    pattern: /^[A-Za-z\u0080-\uFFFF\- ']+$/i,
+                  }),
+                }}
+                errors={errors.name}
+              />
               <Input
                 label="E-mail"
                 name="email"
                 type="email"
                 placeholder="johnsmith@email.com"
+                register={{
+                  ...register("email", {
+                    required: true,
+                    pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
+                  }),
+                }}
+                errors={errors.email}
               />
             </div>
             <div className="mdOnly:w-[463px]">
-              <Input label="Message" name="message" type="textarea" />
+              <Input
+                label="Message"
+                name="message"
+                type="textarea"
+                register={{ ...register("message", { required: true }) }}
+                errors={errors.message}
+              />
             </div>
           </div>
         </Form>

@@ -6,13 +6,14 @@ const ContactBlock = ({
   className,
   listClassName,
   labelClassName,
+  revers,
 }) => {
   return (
     <div className={`flex gap-[20px] md:justify-end ${className ?? ""}`}>
       <ul
-        className={`smOnly:w-[66%] text-right md:w-[73.5%] ${
-          listClassName ?? ""
-        }`}
+        className={`text-right smOnly:w-[${
+          revers ? "34%" : "66%"
+        }] md:w-[73.5%] ${listClassName ?? ""}`}
       >
         {contactsList.map(({ text, href }, idx) => (
           <li key={idx} className="">
@@ -27,9 +28,9 @@ const ContactBlock = ({
       </ul>
 
       <p
-        className={`smOnly:w-[34%] text-[12px] font-extralight leading-[1.67] md:w-[26.5%] ${
-          labelClassName ?? ""
-        }`}
+        className={`text-[12px] font-extralight leading-[1.67] smOnly:w-[${
+          revers ? "66%" : "34%"
+        }] md:w-[26.5%] ${labelClassName ?? ""}`}
       >
         {label}
       </p>

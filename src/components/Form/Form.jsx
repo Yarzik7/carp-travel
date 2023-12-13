@@ -2,13 +2,9 @@
 
 import Button from "../Button/Button";
 
-const Form = ({ buttonCaption, children, className }) => {
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-  };
-
+const Form = ({ buttonCaption, children, className, onSubmit }) => {
   return (
-    <form className={className} onSubmit={handleFormSubmit}>
+    <form className={className} onSubmit={onSubmit}>
       {children}
       <Button buttonCaption={buttonCaption} />
     </form>
