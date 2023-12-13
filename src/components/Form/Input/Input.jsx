@@ -1,4 +1,5 @@
 import { useId } from "react";
+import Icon from "@/components/Icon/Icon";
 
 const Input = ({
   label,
@@ -14,6 +15,7 @@ const Input = ({
       role="alert"
       className="absolute flex align-center gap-1 top-full right-[0px] text-[12px] font-extralight tracking-[2.4px] leading-[2] text-errorColor"
     >
+      <Icon iconName="error" />
       {children}
     </p>
   );
