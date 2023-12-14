@@ -1,17 +1,15 @@
-import Image from "next/image";
-import Sprite from "../../../public/images/sprite.svg";
-import Error from "../../../public/images/error.svg";
-
 const Icon = ({ iconName, size = 18 }) => {
-  const Block = require("../../../public/images/sprite.svg");
-  console.log(Sprite);
-  return <Error />;
-  //   return <Image src={`../../../public/images/sprite.svg#icon-${iconName}`} />;
-  //   return (
-  //     <svg width={size} height={size}>
-  //       <use xlinkHref={error} />
-  //     </svg>
-  //   );
+  return (
+    <svg
+      width="18"
+      height="18"
+      role="img"
+      aria-label="Vercel logo"
+      className="flex justify-center items-center"
+    >
+      <use href="/sprite.svg#resend" />
+    </svg>
+  );
 };
 
 export default Icon;

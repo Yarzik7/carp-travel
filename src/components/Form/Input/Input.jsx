@@ -13,9 +13,18 @@ const Input = ({
   const InvalidMassage = ({ children }) => (
     <p
       role="alert"
-      className="absolute flex align-center gap-1 top-full right-[0px] text-[12px] font-extralight tracking-[2.4px] leading-[2] text-errorColor"
+      className="absolute flex items-center gap-1 top-full right-[0px] text-[12px] font-extralight tracking-[2.4px] leading-[2] text-errorColor"
     >
       <Icon iconName="error" />
+      {/* <svg
+        width="13"
+        height="11"
+        role="img"
+        aria-label="Vercel logo"
+        className="inline-flex mr-1"
+      >
+        <use href="/sprite.svg#vercel" />
+      </svg> */}
       {children}
     </p>
   );
