@@ -1,13 +1,13 @@
 const Icon = ({ iconName, size = 18 }) => {
   return (
     <svg
-      width="18"
-      height="18"
+      width={size}
+      height={size}
       role="img"
       aria-label="Vercel logo"
       className="flex justify-center items-center"
     >
-      <use href="/sprite.svg#resend" />
+      <use xlinkHref={`/icons.svg#icon-${iconName}`} />
     </svg>
   );
 };

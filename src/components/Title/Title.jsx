@@ -1,6 +1,11 @@
-const Title = ({ boldPart, normalPart }) => {
+const Title = ({ boldPart, normalPart, className = "" }) => {
   return (
-    <h2 className="font-thin -tracking-[1.6px] uppercase text-[40px] md:text-[67px] lg:text-[98px]">
+    <h2
+      className={[
+        "font-thin -tracking-[1.6px] uppercase text-[40px] md:text-[67px] lg:text-[98px]",
+        className,
+      ].join(" ")}
+    >
       {normalPart} <span className="font-medium">{boldPart}</span>
     </h2>
   );
