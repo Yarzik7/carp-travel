@@ -7,8 +7,8 @@ import css from "./About.module.css";
 const About = () => {
   return (
     <Section
-      sectionClasses={[css.aboutBgImg]}
-      containerClasses={["sm:max-w-[480px] mdOnly:relative"]}
+      sectionClasses={css.aboutBgImg}
+      containerClasses="sm:max-w-[480px] mdOnly:relative"
     >
       <div className="md:flex gap-[76px] lg:gap-[24px]">
         <Title normalPart={title[0]} boldPart={title[1]} className="" />

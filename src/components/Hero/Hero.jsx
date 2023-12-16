@@ -3,7 +3,7 @@ import css from "./Hero.module.css";
 
 const Hero = () => {
   return (
-    <Section sectionClasses={[css.heroSection, css.heroBgImg]}>
+    <Section sectionClasses={[css.heroSection, css.heroBgImg].join(" ")}>
       <div className="w-full h-full md:relative md:flex justify-between">
         <div className="mb-[24px] text-right uppercase md:absolute top-[0px] right-[20px]  ">
           <p className="text-37px font-thin tracking-1.65px leading-none">
