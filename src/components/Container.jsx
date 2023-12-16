@@ -1,4 +1,4 @@
-const Container = ({ containerClasses = [], children }) => {
+const Container = ({ containerClasses = "", children }) => {
   return (
     <div
       className={[

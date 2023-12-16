@@ -1,11 +1,12 @@
-const Text = ({ strongText, normalText, width, className = "" }) => {
+const Text = ({ strongText, normalText, className = "" }) => {
   return (
     <p
-      className={["text-[14px] font-extralight leading-[1.42]", className].join(
-        " "
-      )}
+      className={[
+        "font-extralight leading-[1.42] md:text-[16px] md:leading-[1.25] lg:text-[18px]",
+        className,
+      ].join(" ")}
     >
-      <strong className="font-normal">{strongText}</strong>
+      <strong className="font-normal">{strongText} </strong>
       {normalText}
     </p>
   );
