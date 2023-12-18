@@ -6,7 +6,7 @@ const Text = ({ strongText, normalText, className = "" }) => {
         className,
       ].join(" ")}
     >
-      <strong className="font-normal">{strongText} </strong>
+      {strongText && <strong className="font-normal">{strongText} </strong>}
       {normalText}
     </p>
   );

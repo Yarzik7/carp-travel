@@ -2,7 +2,7 @@
 
 import Button from "../Button/Button";
 
-const Form = ({ buttonCaption, children, className, onSubmit }) => {
+const Form = ({ buttonCaption, children, className = "", onSubmit }) => {
   return (
     <form className={className} onSubmit={onSubmit}>
       {children}

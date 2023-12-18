@@ -77,6 +77,7 @@ const Contacts = () => {
                 type="textarea"
                 register={{ ...register("message", { required: true }) }}
                 errors={errors.message}
+                inputClasses="h-[193px]"
               />
             </div>
           </div>

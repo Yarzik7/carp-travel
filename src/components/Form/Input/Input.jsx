@@ -7,6 +7,9 @@ const Input = ({
   onChange,
   placeholder,
   type,
+  containerClasses = "",
+  inputClasses = "",
+  labelClasses = "",
   register,
   errors,
 }) => {
@@ -23,11 +26,20 @@ const Input = ({
   const inputId = useId();
 
   return (
-    <div className="w-full relative">
+    <div className={["w-full relative", containerClasses].join(" ")}>
       <label
         htmlFor={inputId}
-        className="mb-[4px] text-[12px] font-extralight leading-[2] tracking-[2.4px]"
+        className={[
+          "block h-[24px] text-[12px] font-extralight leading-[2]",
+          labelClasses,
+          type !== "checkbox" ? "mb-[4px] tracking-[2.4px]" : "",
+        ].join(" ")}
       >
+        {type === "checkbox" && (
+          <span className="block absolute left-[0] w-[22px] h-[22px] p-[3px] border">
+            <span className="block w-full h-full bg-white/10"></span>
+          </span>
+        )}
         {label}
       </label>
 
@@ -35,7 +47,12 @@ const Input = ({
         <>
           <input
             id={inputId}
-            className="w-full px-[8px] text-[13px] font-extralight leading-[1.85] bg-white/5 placeholder:text-white/20"
+            className={[
+              type !== "checkbox"
+                ? "text-[13px] font-extralight leading-[1.85] bg-white/5 placeholder:text-white/20 w-full h-[24px] px-[8px] lg:h-[28px]"
+                : "",
+              inputClasses,
+            ].join(" ")}
             type={type}
             name={name}
             placeholder={placeholder}
@@ -56,7 +73,10 @@ const Input = ({
             id={inputId}
             onChange={onChange}
             name={name}
-            className="w-full h-[193px] px-[8px] text-[13px] font-extralight leading-[1.85] resize-none bg-white/5 placeholder:text-white/20"
+            className={[
+              "w-full px-[8px] text-[13px] font-extralight leading-[1.85] resize-none bg-white/5 placeholder:text-white/20",
+              inputClasses,
+            ].join(" ")}
             {...register}
           ></textarea>
         </>
