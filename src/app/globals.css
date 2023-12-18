@@ -48,3 +48,7 @@ address {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+.agree-checkbox:checked + .custom-checkbox > .custom-checkbox__inner {
+  background-color: #fff;
+}

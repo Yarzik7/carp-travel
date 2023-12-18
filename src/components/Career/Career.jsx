@@ -5,6 +5,7 @@ import Text from "../Text/Text";
 import Benefit from "./Benefit";
 import Form from "../Form/Form";
 import Input from "../Form/Input/Input";
+import Checkbox from "../Form/Input/Checkbox";
 import {
   title,
   benefits,
@@ -18,13 +19,13 @@ const Career = () => {
   const {
     register,
     handleSubmit,
-    getFieldState,
     formState: { errors },
   } = useForm({
     mode: "onTouched",
   });
 
   const onSubmit = (data) => console.log(data);
+
   return (
     <Section sectionClasses={css.careerBgImg}>
       <div className="md:flex justify-between">
@@ -54,7 +55,7 @@ const Career = () => {
           </ul>
         </div>
 
-        <div className="w-full mdOnly:pt-[83px] lg:w-1/2">
+        <div className="w-full mdOnly:pt-[83px] md:relative lg:w-1/2">
           <div className="w-[179px] font-extralight leading-[1.42] smOnly:ml-auto md:w-[221px] md:text-[13px] md:leading-[1.54] lg:w-[234px] lg:text-[18px] lg:leading-[1.33]">
             <Text normalText={formSlogan[0]} />
             <Text normalText={formSlogan[1]} />
@@ -63,6 +64,7 @@ const Career = () => {
           <Form
             onSubmit={handleSubmit(onSubmit)}
             className="mt-[24px] md:mt-[32px] lg:mt-[16px]"
+            buttonClasses="md:mt-[9px] lg:mt-[24px]"
           >
             <div className="md:flex md:gap-[20px] lg:gap-[24px]">
               <div className="flex flex-col gap-[16px] md:w-1/2 lg:gap-[24px]">
@@ -126,13 +128,11 @@ const Career = () => {
                   errors={errors.message}
                   inputClasses="h-[196px] md:h-[228px] lg:h-[270px]"
                 />
-                <Input
+                <Checkbox
                   label="I confirm my consent to the processing of personal data."
-                  type="checkbox"
                   name="agree"
-                  containerClasses="flex flex-row-reverse gap-[8px] smOnly:my-[16px]"
-                  labelClasses="w-[250px] h-[44px] mb-[0] leading-[1.83] tracking-[0]"
-                  inputClasses="appearance-none"
+                  register={{ ...register("agree") }}
+                  containerClasses="smOnly:my-[16px] md:absolute md:left-[0] -bottom-[12px] md:w-[222px] lg:w-[290px] lg:-bottom-[20px]"
                 />
               </div>
             </div>

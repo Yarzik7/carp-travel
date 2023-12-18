@@ -12,6 +12,7 @@ const Contacts = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     mode: "onTouched",
