@@ -3,20 +3,24 @@ import Section from "../Section";
 import Title from "../Title/Title";
 import GalleryImg from "./GalleryImg";
 import { title, gallery } from "../../data/gallery/gallery.json";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import GallerySwiper from "./GallerySwiper";
 import css from "./Gallery.module.css";
 
 const Gallery = () => {
   return (
-    <Section sectionClasses={css.galleryBgImg}>
-      <Title normalPart={title[0]} boldPart={title[1]} />
+    <Section sectionClasses={css.galleryBgImg} containerClasses="md:relative">
+      <Title
+        normalPart={title[0]}
+        boldPart={title[1]}
+        className="md:text-center"
+      />
       <div className="mt-[24px] md:mt-[72px] lg:mt-[25px]">
-        <ul>
+        <ul className="md:hidden">
           {gallery.map(({ id, src, alt }) => (
             <GalleryImg key={id} src={src} alt={alt} />
           ))}
         </ul>
+        <GallerySwiper />
       </div>
     </Section>
   );

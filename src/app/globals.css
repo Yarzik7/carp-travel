@@ -52,3 +52,9 @@ address {
 .agree-checkbox:checked + .custom-checkbox > .custom-checkbox__inner {
   background-color: #fff;
 }
+
+.gallery-swiper .swiper-button-prev,
+.gallery-swiper .swiper-button-next {
+  position: absolute;
+  top: 100%;
+}
