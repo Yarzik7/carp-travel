@@ -1,6 +1,11 @@
 import Container from "./Container";
 
-const Section = ({ sectionClasses = "", containerClasses, children }) => {
+const Section = ({
+  sectionClasses = "",
+  containerClasses,
+  children,
+  withoutContainer = false,
+}) => {
   return (
     <section
       className={[
@@ -8,7 +13,11 @@ const Section = ({ sectionClasses = "", containerClasses, children }) => {
         sectionClasses,
       ].join(" ")}
     >
-      <Container containerClasses={containerClasses}>{children}</Container>
+      {withoutContainer ? (
+        children
+      ) : (
+        <Container containerClasses={containerClasses}>{children}</Container>
+      )}
     </section>
   );
 };
