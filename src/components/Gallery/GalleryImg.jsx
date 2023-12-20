@@ -8,7 +8,7 @@ const GalleryImg = ({ src, alt }) => {
         alt={alt}
         width={280}
         height={187}
-        className="bg-cover"
+        className="fit-cover"
       />
     </li>
   );

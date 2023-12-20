@@ -1,14 +1,10 @@
 import { gallery } from "../../data/gallery/gallery.json";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
 import "swiper/css/keyboard";
-
-const initialSlideIndex = 1;
 
 const swiperGallery = [
   ...gallery,
@@ -19,22 +15,18 @@ const GallerySwiper = () => {
   return (
     <Swiper
       wrapperTag="ul"
-      effect={"coverflow"}
-      initialSlide={initialSlideIndex}
+      initialSlide={1}
       hashNavigation={true}
-      navigation={true}
+      navigation={{
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }}
       grabCursor={true}
       centeredSlides={true}
-      slidesPerView={3}
       spaceBetween={24}
-      coverflowEffect={{
-        rotate: 0,
-        scale: 1,
-        modifier: 1,
-        slideShadows: true,
-      }}
+      slidesPerView={3}
+      modules={[Navigation]}
       loop={true}
-      modules={[EffectCoverflow, Navigation]}
       className="gallery-swiper smOnly:hidden"
     >
       {swiperGallery.map(({ id, src, alt }) => (
@@ -44,10 +36,12 @@ const GallerySwiper = () => {
             alt={alt}
             width={606}
             height={429}
-            className="bg-cover w-[415px] h-[294px]"
+            className="fit-cover"
           />
         </SwiperSlide>
       ))}
+      <button className="swiper-button-prev">Back</button>
+      <button className="swiper-button-next">Next</button>
     </Swiper>
   );
 };
