@@ -23,11 +23,12 @@ const ServicesSlide = ({
           height={213}
           className="bg-gray h-[213px] fit-cover"
         />
-        <p className="mt-[12px] text-[12px] text-right font-extralight leading-[2] tracking-[2.4px]">
-          {slogan}
-        </p>
-        <div className="mt-auto">
-          <Text normalText={description} />
+        <div className="min-h-[358px] flex flex-col justify-between mt-[12px]">
+          <p className="text-[12px] text-right font-extralight leading-[2] tracking-[2.4px]">
+            {slogan}
+          </p>
+
+          <Text normalText={description} className="mt-auto" />
         </div>
       </Container>
     </article>

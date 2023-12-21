@@ -21,8 +21,8 @@ const servicesBg = [
 
 const ServicesSwiper = () => {
   return (
-    <div className="services-swiper absolute top-[0] left-[0] w-full h-full z-[-1]">
-      <Swiper wrapperTag="ul" className="h-full">
+    <div className="services-swiper">
+      <Swiper wrapperTag="ul" slidesPerView={1} className="h-full">
         {services.map((service, idx) => (
           <SwiperSlide key={service.id} tag="li">
             <ServicesSlide service={service} articleClasses={servicesBg[idx]} />
@@ -32,5 +32,5 @@ const ServicesSwiper = () => {
     </div>
   );
 };
-
+// absolute top-[0] left-[0] w-full h-full
 export default ServicesSwiper;
