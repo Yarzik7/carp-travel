@@ -7,8 +7,10 @@ import Text from "../Text/Text";
 import { title, servicesList } from "../../data/services/services.json";
 import css from "./Services.module.css";
 import Title from "../Title/Title";
+import { useState } from "react";
 
 const Services = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
   return (
     <Section withoutContainer sectionClasses="py-[0] min-h-[821px] relative">
       <div className="absolute top-[0] left-[0] z-[2] w-full h-full py-[56px] md:py-[64px] lg:py-[80px] pointer-events-none">
