@@ -8,6 +8,9 @@ import { title, servicesList } from "../../data/services/services.json";
 import css from "./Services.module.css";
 import Title from "../Title/Title";
 import { useState } from "react";
+import { EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 const Services = () => {
   const [activeSlide, setActiveSlide] = useState(0);
