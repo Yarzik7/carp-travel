@@ -25,7 +25,13 @@ const Services = () => {
             </p>
             <ul className="mt-[289px] flex flex-col gap-[16px]">
               {servicesList.map((service, idx) => (
-                <ServiceListItem key={idx} service={service} />
+                <ServiceListItem
+                  key={idx}
+                  service={service}
+                  activeSlide={activeSlide}
+                  setActiveSlide={setActiveSlide}
+                  index={idx}
+                />
               ))}
             </ul>
           </div>

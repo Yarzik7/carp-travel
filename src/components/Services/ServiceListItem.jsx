@@ -1,15 +1,21 @@
 import Icon from "../Icon/Icon";
 
-const ServiceListItem = ({ service, active = false }) => {
+const ServiceListItem = ({ service, setActiveSlide, activeSlide, index }) => {
+  const handleActive = () => {
+    setActiveSlide(index);
+  };
+
+  const isActive = activeSlide === index;
+
   return (
     <li>
       <button
-        onClick={() => console.log("click")}
+        onClick={handleActive}
         className={`flex gap-[8px] items-center text-[20px] text-white${
-          active ? "" : "/50"
+          isActive ? "" : "/50"
         } font-extralight leading-[0.85] pointer-events-auto`}
       >
-        {active && <Icon iconName="listMarker" size={6} />}
+        {isActive && <Icon iconName="listMarker" size={6} />}
         {service}
       </button>
     </li>
