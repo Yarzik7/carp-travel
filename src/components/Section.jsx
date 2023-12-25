@@ -1,4 +1,5 @@
 import Container from "./Container";
+import { twMerge } from "tailwind-merge";
 
 const Section = ({
   sectionClasses = "",
@@ -8,10 +9,10 @@ const Section = ({
 }) => {
   return (
     <section
-      className={[
+      className={twMerge(
         "section-background py-[56px] md:py-[64px] lg:py-[80px]",
-        sectionClasses,
-      ].join(" ")}
+        sectionClasses
+      )}
     >
       {withoutContainer ? (
         children

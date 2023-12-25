@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ServicesSlide from "./ServicesSlide";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { title, services } from "../../data/services/services.json";
 import {
@@ -10,6 +10,10 @@ import {
   serviceSkydivingBgImg,
   serviceRaftingBgImg,
 } from "./Services.module.css";
+import { EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import { useState } from "react";
 
 const servicesBg = [
   serviceTravelingBgImg,
@@ -19,10 +23,20 @@ const servicesBg = [
   serviceRaftingBgImg,
 ];
 
-const ServicesSwiper = () => {
+const ServicesSwiper = ({ setActiveSlide, onInitSwiper }) => {
+  // const [state, setState] = useState(null);
+  // console.log(state.on);
   return (
     <div className="services-swiper">
-      <Swiper wrapperTag="ul" slidesPerView={1} className="h-full">
+      <Swiper
+        wrapperTag="ul"
+        slidesPerView={1}
+        effect="fade"
+        modules={[EffectFade]}
+        onSwiper={onInitSwiper}
+        onSlideChange={(e) => setActiveSlide(e.activeIndex)}
+        className="h-full"
+      >
         {services.map((service, idx) => (
           <SwiperSlide key={service.id} tag="li">
             <ServicesSlide service={service} articleClasses={servicesBg[idx]} />
