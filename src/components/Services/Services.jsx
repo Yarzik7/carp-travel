@@ -15,7 +15,7 @@ import "swiper/css/effect-fade";
 const Services = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   return (
-    <Section withoutContainer sectionClasses="py-[0] min-h-[821px] relative">
+    <Section withoutContainer sectionClasses="py-[0px] min-h-[821px] relative">
       <div className="absolute top-[0] left-[0] z-[2] w-full h-full py-[56px] md:py-[64px] lg:py-[80px] pointer-events-none">
         <Container containerClasses="h-full">
           <Title normalPart={title[0]} boldPart={title[1]} />

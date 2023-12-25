@@ -11,8 +11,8 @@ const ServiceListItem = ({ service, setActiveSlide, activeSlide, index }) => {
     <li>
       <button
         onClick={handleActive}
-        className={`flex gap-[8px] items-center text-[20px] text-white${
-          isActive ? "" : "/50"
+        className={`flex gap-[8px] items-center text-[20px] ${
+          isActive ? "text-white" : "text-white/50"
         } font-extralight leading-[0.85] pointer-events-auto`}
       >
         {isActive && <Icon iconName="listMarker" size={6} />}
