@@ -10,18 +10,18 @@ const ServicesSlide = ({
   return (
     <article
       className={[
-        "section-background h-full pt-[202px] pb-[56px]",
+        "section-background h-full pt-[202px] pb-[56px] md:pt-[182px]",
         articleClasses,
       ].join(" ")}
     >
-      <Container containerClasses="h-full">
+      <Container containerClasses="h-full md:flex justify-between">
         <h3 className="visually-hidden">{title}</h3>
         <Image
           src={src}
           alt={title}
           width={280}
           height={213}
-          className="bg-gray h-[213px] fit-cover"
+          className="bg-gray h-[213px] fit-cover md:w-[463px] md:h-[370px]"
         />
         <div className="min-h-[358px] flex flex-col justify-between mt-[12px]">
           <p className="text-[12px] text-right font-extralight leading-[2] tracking-[2.4px]">
