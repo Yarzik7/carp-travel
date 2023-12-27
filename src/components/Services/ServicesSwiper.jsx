@@ -27,7 +27,7 @@ const ServicesSwiper = ({ setActiveSlide, onInitSwiper }) => {
   // const [state, setState] = useState(null);
   // console.log(state.on);
   return (
-    <div className="services-swiper">
+    <div className="services-swiper min-h-full">
       <Swiper
         wrapperTag="ul"
         slidesPerView={1}

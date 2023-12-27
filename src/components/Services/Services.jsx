@@ -19,7 +19,7 @@ const Services = () => {
   return (
     <Section
       withoutContainer
-      sectionClasses="py-[0px] min-h-[821px] relative md:py-[0px] lg:py-[0px]"
+      sectionClasses="py-[0px] smOnly:min-h-[821px] relative md:py-[0px] lg:py-[0px]"
     >
       <div className="absolute top-[0] left-[0] z-[2] w-full h-full py-[56px] md:py-[64px] lg:py-[80px] pointer-events-none">
         <Container containerClasses="h-full md:flex md:justify-between">

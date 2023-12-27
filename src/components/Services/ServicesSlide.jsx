@@ -14,7 +14,7 @@ const ServicesSlide = ({
         articleClasses,
       ].join(" ")}
     >
-      <Container containerClasses="h-full md:flex justify-between">
+      <Container containerClasses="h-full md:flex md:gap-[20px]">
         <h3 className="visually-hidden">{title}</h3>
         <Image
           src={src}
@@ -23,12 +23,15 @@ const ServicesSlide = ({
           height={213}
           className="bg-gray h-[213px] fit-cover md:w-[463px] md:h-[370px]"
         />
-        <div className="min-h-[358px] flex flex-col justify-between mt-[12px]">
-          <p className="text-[12px] text-right font-extralight leading-[2] tracking-[2.4px]">
+        <div className="min-h-[358px] flex flex-col justify-between smOnly:mt-[12px] md:w-[221px] md:pt-[197px]">
+          <p className="text-[12px] smOnly:text-right font-extralight leading-[2] tracking-[2.4px]">
             {slogan}
           </p>
 
-          <Text normalText={description} className="mt-auto" />
+          <Text
+            normalText={description}
+            className="mt-auto md:text-[12.5px] md:leading-[1.53] md:text-justify"
+          />
         </div>
       </Container>
     </article>
