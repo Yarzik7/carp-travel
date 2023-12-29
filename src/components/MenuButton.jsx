@@ -1,7 +1,15 @@
-const MenuButton = () => {
+import { twMerge } from "tailwind-merge";
+
+const MenuButton = ({ caption, onClick, className }) => {
   return (
-    <button className="uppercase tablet:hidden text-[14px] tracking-[1.4px]">
-      {"Menu"}
+    <button
+      onClick={onClick}
+      className={twMerge(
+        "uppercase md:hidden text-[14px] tracking-[1.4px]",
+        className
+      )}
+    >
+      {caption}
     </button>
   );
 };
