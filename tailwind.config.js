@@ -37,6 +37,7 @@ module.exports = {
       bgButton: "rgba(255, 255, 255, 0.10)",
       textColor: "#fff",
       errorColor: "#FF5757",
+      backdropColor: "rgba(1, 10, 5, 0.75)",
     },
     letterSpacing: {
       "9.48px": "9.48px",

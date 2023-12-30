@@ -24,7 +24,7 @@ const Backdrop = ({ onClose, children }) => {
   return (
     <div
       onClick={handleCloseByClick}
-      className="fixed top-[0px] left-[0px] w-full h-full bg-[rgba(1, 10, 5, 0.75)]"
+      className="fixed top-[0px] left-[0px] w-full h-full bg-backdropColor backdrop-blur-xl"
     >
       <MenuButton
         caption="Close"
