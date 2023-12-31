@@ -22,7 +22,7 @@ const Header = () => {
         <Modal onClose={onToggleModal}>
           <Navigation
             listClassName="flex-col items-center text-center text-[18px] gap-[48px]"
-            linkClassName="py-[0px]"
+            linkClassName="py-[0px] leading-[1.8px]"
           />
         </Modal>
       )}
