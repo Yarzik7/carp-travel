@@ -1,5 +1,5 @@
 const ModalContent = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="flex items-center">{children}</div>;
 };
 
 export default ModalContent;

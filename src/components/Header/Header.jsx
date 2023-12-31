@@ -15,10 +15,17 @@ const Header = () => {
     <header className="absolute w-full bg-transparent">
       <Container containerClasses={[css.headerContainer]}>
         <Logo />
-        <Navigation />
+        <Navigation className="smOnly:hidden" />
         {!showModal && <MenuButton caption="Menu" onClick={onToggleModal} />}
       </Container>
-      {showModal && <Modal onClose={onToggleModal}>{"Modal"}</Modal>}
+      {showModal && (
+        <Modal onClose={onToggleModal}>
+          <Navigation
+            listClassName="flex-col items-center text-center text-[18px] gap-[48px]"
+            linkClassName="py-[0px]"
+          />
+        </Modal>
+      )}
     </header>
   );
 };
