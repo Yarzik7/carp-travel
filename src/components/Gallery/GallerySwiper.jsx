@@ -27,7 +27,7 @@ const GallerySwiper = () => {
       slidesPerView={3}
       modules={[Navigation]}
       loop={true}
-      className="gallery-swiper smOnly:hidden"
+      className="gallery-swiper"
     >
       {swiperGallery.map(({ id, src, alt }) => (
         <SwiperSlide key={id} tag="li">

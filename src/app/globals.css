@@ -66,6 +66,12 @@ address {
   background-color: #fff;
 }
 
+.swiper.gallery-swiper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
 .gallery-swiper .swiper-button-prev,
 .gallery-swiper .swiper-button-next {
   position: absolute;
