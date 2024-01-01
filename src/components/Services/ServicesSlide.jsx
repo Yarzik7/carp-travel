@@ -1,6 +1,6 @@
+"use client";
 import Container from "../Container";
 import Text from "../Text/Text";
-import { title } from "../../data/services/services.json";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 
@@ -29,7 +29,7 @@ const ServicesSlide = ({
         />
         <div
           style={{ paddingTop }}
-          className="min-h-[358px] flex flex-col justify-between smOnly:mt-[12px] md:w-[221px] mdOnly:pt-[197px] lg:w-[293px]"
+          className="services-description-container min-h-[358px] flex flex-col justify-between smOnly:mt-[12px] md:w-[221px] lg:w-[293px]"
         >
           <p className="text-[12px] smOnly:text-right font-extralight leading-[2] tracking-[2.4px] lg:leading-[1]">
             {slogan}
