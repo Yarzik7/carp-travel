@@ -9,7 +9,10 @@ import css from "./Header.module.css";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
-  const onToggleModal = () => setShowModal(!showModal);
+  const onToggleModal = () => {
+    setShowModal(!showModal);
+    document.body.classList.toggle("is-open");
+  };
 
   return (
     <header className="absolute w-full bg-transparent">
@@ -23,6 +26,7 @@ const Header = () => {
           <Navigation
             listClassName="flex-col items-center text-center text-[18px] gap-[48px]"
             linkClassName="py-[0px] leading-[1.8px]"
+            onLinkClick={onToggleModal}
           />
         </Modal>
       )}

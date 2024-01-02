@@ -37,7 +37,7 @@ const ServicesSlide = ({
 
           <Text
             normalText={description}
-            className="mt-auto md:text-[12.5px] md:leading-[1.53] md:text-justify"
+            className="mt-auto md:text-[12.5px] md:leading-[1.53] md:text-justify lg:text-[18.3px] lg:leading-[1.33]"
           />
         </div>
       </Container>

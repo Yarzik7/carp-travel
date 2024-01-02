@@ -33,10 +33,18 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 13.5px;
   line-height: normal;
   color: var(--white-color);
+}
+
+body.is-open {
+  overflow: hidden;
 }
 
 address {
@@ -73,7 +81,11 @@ address {
 }
 
 .services-description-container {
-  @media screen and (min-width: 767px) and (max-width: 1279px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding-top: 0px !important;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     padding-top: 197px !important;
   }
 }

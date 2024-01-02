@@ -6,9 +6,11 @@ const Section = ({
   containerClasses,
   children,
   withoutContainer = false,
+  id,
 }) => {
   return (
     <section
+      id={id}
       className={twMerge(
         "section-background py-[56px] md:py-[64px] lg:py-[80px]",
         sectionClasses

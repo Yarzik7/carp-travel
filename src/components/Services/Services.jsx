@@ -18,6 +18,7 @@ const Services = () => {
 
   return (
     <Section
+      id="services"
       withoutContainer
       sectionClasses="py-[0px] smOnly:min-h-[821px] relative md:py-[0px] lg:py-[0px]"
     >

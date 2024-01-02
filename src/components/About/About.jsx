@@ -7,6 +7,7 @@ import css from "./About.module.css";
 const About = () => {
   return (
     <Section
+      id="about"
       sectionClasses={css.aboutBgImg}
       containerClasses="sm:max-w-[480px] mdOnly:relative"
     >

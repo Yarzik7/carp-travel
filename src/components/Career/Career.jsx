@@ -27,7 +27,7 @@ const Career = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <Section sectionClasses={css.careerBgImg}>
+    <Section id="career" sectionClasses={css.careerBgImg}>
       <div className="md:flex justify-between">
         <Title normalPart={title[0]} boldPart={title[1]} />
         <Text

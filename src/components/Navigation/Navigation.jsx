@@ -24,7 +24,8 @@ const Navigation = ({
   className = "",
   listClassName = "",
   listItemClassName = "",
-  linkClassName= ""
+  linkClassName = "",
+  onLinkClick
 }) => {
   return (
     <nav className={twMerge("", className)}>
@@ -32,7 +33,11 @@ const Navigation = ({
         {navList.map(({ caption, href }, idx) => {
           return (
             <li key={idx} className={twMerge("", listItemClassName)}>
-              <Link href={href} className={twMerge("py-[34px]", linkClassName)}>
+              <Link
+                href={href}
+                onClick={onLinkClick}
+                className={twMerge("py-[34px]", linkClassName)}
+              >
                 {caption}
               </Link>
             </li>

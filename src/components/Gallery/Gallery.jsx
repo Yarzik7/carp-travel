@@ -9,6 +9,7 @@ import css from "./Gallery.module.css";
 const Gallery = () => {
   return (
     <Section
+      id="gallery"
       sectionClasses={css.galleryBgImg}
       containerClasses="md:relative lg:px-[0]"
     >
