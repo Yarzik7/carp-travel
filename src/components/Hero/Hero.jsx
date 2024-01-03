@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Section from "../Section";
 import { title, places, slogan, description } from "../../data/hero/hero.json";
 import css from "./Hero.module.css";
@@ -30,9 +31,12 @@ const Hero = () => {
           <p className="mb-[24px] text-justify font-extralight leading-[1.42] md:text-[16px] md:leading-[1.25] lg:text-[18px]">
             {description}
           </p>
-          <button className="uppercase text-18px flex justify-center items-center font-bold w-full h-53px bg-bgButton">
+          <Link
+            href="#contacts"
+            className="uppercase text-18px flex justify-center items-center font-bold w-full h-53px bg-bgButton"
+          >
             Join now
-          </button>
+          </Link>
         </div>
       </div>
     </Section>

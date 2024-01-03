@@ -6,6 +6,7 @@ const GalleryImg = ({ src, alt }) => {
       <Image
         src={src}
         alt={alt}
+        loading="lazy"
         width={280}
         height={187}
         className="fit-cover"

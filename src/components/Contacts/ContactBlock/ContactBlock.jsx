@@ -1,19 +1,23 @@
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 const ContactBlock = ({
   contactsList,
   label,
-  className,
-  listClassName,
-  labelClassName,
+  className = "",
+  listClassName = "",
+  labelClassName = "",
   revers,
 }) => {
   return (
-    <div className={`flex gap-[20px] md:justify-end ${className ?? ""}`}>
+    <div className={twMerge("flex gap-[20px] md:justify-end", className)}>
       <ul
-        className={`text-right smOnly:w-[${
-          revers ? "34%" : "66%"
-        }] md:w-[73.5%] ${listClassName ?? ""}`}
+        className={twMerge(
+          `text-right text-[14px] ${
+            revers ? "smOnly:w-[34%]" : "smOnly:w-[66%]"
+          } md:w-[73.5%]`,
+          listClassName
+        )}
       >
         {contactsList.map(({ text, href }, idx) => (
           <li key={idx} className="">
@@ -28,9 +32,12 @@ const ContactBlock = ({
       </ul>
 
       <p
-        className={`text-[12px] font-extralight leading-[1.67] smOnly:w-[${
-          revers ? "66%" : "34%"
-        }] md:w-[26.5%] ${labelClassName ?? ""}`}
+        className={twMerge(
+          `text-[12px] font-extralight leading-[1.67] ${
+            revers ? "smOnly:w-[66%]" : "smOnly:w-[34%]"
+          } md:w-[26.5%]`,
+          labelClassName
+        )}
       >
         {label}
       </p>

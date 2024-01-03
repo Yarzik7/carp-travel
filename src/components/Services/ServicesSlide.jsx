@@ -23,6 +23,7 @@ const ServicesSlide = ({
         <Image
           src={src}
           alt={title}
+          loading="lazy"
           width={280}
           height={213}
           className="bg-gray h-[213px] fit-cover md:w-[463px] md:h-[370px] lg:w-[607px] lg:h-[429px]"
