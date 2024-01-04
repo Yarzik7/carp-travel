@@ -60,6 +60,10 @@ address {
   background-position: 50% 50%;
 }
 
+.custom-checkbox__inner {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .agree-checkbox:checked + .custom-checkbox > .custom-checkbox__inner {
   background-color: #fff;
 }
