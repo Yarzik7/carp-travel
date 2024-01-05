@@ -33,9 +33,13 @@ const Hero = () => {
           </p>
           <Link
             href="#contacts"
-            className="uppercase text-18px flex justify-center items-center font-bold w-full h-53px bg-bgButton"
+            className="relative w-full h-[53px] uppercase text-[18px] flex justify-center items-center font-bold y-100 y-100 transition-colors duration-300 ease-in-out bg-bgButton hover:bg-bgButtonHov"
           >
+            <span className="hero-button-borders top-[0px] left-[0px] border-t border-l"></span>
+            <span className="hero-button-borders top-[0px] right-[0px] border-t border-r"></span>
             Join now
+            <span className="hero-button-borders bottom-[0px] left-[0px] border-b border-l"></span>
+            <span className="hero-button-borders bottom-[0px] right-[0px] border-b border-r"></span>
           </Link>
         </div>
       </div>

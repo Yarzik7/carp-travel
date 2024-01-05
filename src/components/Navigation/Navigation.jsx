@@ -1,4 +1,3 @@
-import css from "./Navigation.module.css";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
@@ -9,16 +8,6 @@ const navList = [
   { caption: "Gallery", href: "#gallery" },
   { caption: "Contacts", href: "#contacts" },
 ];
-
-// const renderNav = ({ caption, href }, idx) => {
-//   return (
-//     <li key={idx} className="">
-//       <Link href={href} className="py-[34px]">
-//         {caption}
-//       </Link>
-//     </li>
-//   );
-// };
 
 const Navigation = ({
   className = "",
