@@ -63,7 +63,7 @@ address {
   position: absolute;
   bottom: -3px;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 1px;
   background-color: #fff;
   scale: 0;
@@ -71,7 +71,7 @@ address {
 }
 
 .custom-link:hover::after {
-  scale: 1;
+  width: 100%;
 }
 
 .visually-hidden {
