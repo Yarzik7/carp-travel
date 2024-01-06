@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CustomLink from "../CustomLink";
 import { twMerge } from "tailwind-merge";
 
 const navList = [
@@ -14,7 +15,7 @@ const Navigation = ({
   listClassName = "",
   listItemClassName = "",
   linkClassName = "",
-  onLinkClick
+  onLinkClick,
 }) => {
   return (
     <nav className={twMerge("", className)}>
@@ -22,13 +23,13 @@ const Navigation = ({
         {navList.map(({ caption, href }, idx) => {
           return (
             <li key={idx} className={twMerge("", listItemClassName)}>
-              <Link
+              <CustomLink
                 href={href}
                 onClick={onLinkClick}
-                className={twMerge("py-[34px]", linkClassName)}
+                className={twMerge("", linkClassName)}
               >
                 {caption}
-              </Link>
+              </CustomLink>
             </li>
           );
         })}
