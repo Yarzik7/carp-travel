@@ -30,7 +30,9 @@ const Input = ({
       <label
         htmlFor={inputId}
         className={[
-          "block h-[24px] text-[12px] font-extralight leading-[2] mb-[4px] tracking-[2.4px]",
+          `block h-[24px] text-[12px] font-extralight leading-[2] mb-[4px] tracking-[2.4px]${
+            errors ? " text-errorColor" : ""
+          }`,
           labelClasses,
         ].join(" ")}
       >
