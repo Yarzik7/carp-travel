@@ -3,14 +3,10 @@ import { useId } from "react";
 const Checkbox = ({
   label,
   name,
-  onChange,
-  placeholder,
-  type,
   containerClasses = "",
   inputClasses = "",
   labelClasses = "",
   register,
-  errors,
 }) => {
   const inputId = useId();
 
