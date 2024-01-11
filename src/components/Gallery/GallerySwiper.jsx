@@ -1,14 +1,14 @@
-import { gallery } from "../../data/gallery/gallery.json";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { gallery } from '../../data/gallery/gallery.json';
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 
-import "swiper/css";
-import "swiper/css/keyboard";
+import 'swiper/css';
+import 'swiper/css/keyboard';
 
 const swiperGallery = [
   ...gallery,
-  ...gallery.map((item) => ({ ...item, id: item.id + gallery.length })),
+  ...gallery.map(item => ({ ...item, id: item.id + gallery.length })),
 ];
 
 const GallerySwiper = () => {
@@ -18,8 +18,8 @@ const GallerySwiper = () => {
       initialSlide={1}
       hashNavigation={true}
       navigation={{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       }}
       grabCursor={true}
       centeredSlides={true}
@@ -27,17 +27,11 @@ const GallerySwiper = () => {
       slidesPerView={3}
       modules={[Navigation]}
       loop={true}
-      className="gallery-swiper"
+      className="gallery-swiper smOnly:hidden"
     >
       {swiperGallery.map(({ id, src, alt }) => (
         <SwiperSlide key={id} tag="li">
-          <Image
-            src={src}
-            alt={alt}
-            width={606}
-            height={429}
-            className="fit-cover"
-          />
+          <Image src={src} alt={alt} width={606} height={429} className="fit-cover" />
         </SwiperSlide>
       ))}
       <button className="swiper-button-prev">Back</button>
