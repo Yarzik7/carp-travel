@@ -1,10 +1,10 @@
-"use client";
-import Section from "../Section";
-import Title from "../Title/Title";
-import GalleryImg from "./GalleryImg";
-import { title, gallery } from "../../data/gallery/gallery.json";
-import GallerySwiper from "./GallerySwiper";
-import css from "./Gallery.module.css";
+'use client';
+import Section from '../Section';
+import Title from '../Title/Title';
+import GalleryImg from './GalleryImg';
+import { title, gallery } from '../../data/gallery/gallery.json';
+import GallerySwiper from './GallerySwiper';
+import css from './Gallery.module.css';
 
 const Gallery = () => {
   return (
@@ -24,7 +24,9 @@ const Gallery = () => {
             <GalleryImg key={id} src={src} alt={alt} />
           ))}
         </ul>
-        <GallerySwiper />
+        <div className="max-md:hidden">
+          <GallerySwiper />
+        </div>
       </div>
     </Section>
   );
