@@ -54,7 +54,7 @@ address {
 }
 
 .custom-link::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -3px;
   left: 0;
@@ -97,7 +97,7 @@ address {
 
 .swiper.gallery-swiper {
   @media screen and (max-width: 767px) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -173,7 +173,7 @@ address {
 
 .gallery-swiper .swiper-slide-prev::after,
 .gallery-swiper .swiper-slide-next::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   width: 100%;
