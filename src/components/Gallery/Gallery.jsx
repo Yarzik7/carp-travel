@@ -24,7 +24,7 @@ const Gallery = () => {
             <GalleryImg key={id} src={src} alt={alt} />
           ))}
         </ul>
-        <div className="max-md:hidden">
+        <div className="smOnly:hidden">
           <GallerySwiper />
         </div>
       </div>
