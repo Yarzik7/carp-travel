@@ -1,8 +1,8 @@
-"use client";
-import Container from "../Container";
-import Text from "../Text/Text";
-import { twMerge } from "tailwind-merge";
-import Image from "next/image";
+'use client';
+import Container from '../Container';
+import Text from '../Text/Text';
+import { twMerge } from 'tailwind-merge';
+import Image from 'next/image';
 
 const ServicesSlide = ({
   service: { src, slogan, description, title },
@@ -14,18 +14,18 @@ const ServicesSlide = ({
   return (
     <article
       className={[
-        "section-background h-full pt-[202px] pb-[56px] md:pt-[182px] lg:pt-[219px]",
+        'section-background h-full pt-[202px] pb-[56px] md:pt-[182px] lg:pt-[219px]',
         articleClasses,
-      ].join(" ")}
+      ].join(' ')}
     >
       <Container containerClasses="h-full md:flex mdOnly:gap-[20px] lg:justify-between">
         <h3 className="visually-hidden">{title}</h3>
         <Image
           src={src}
           alt={title}
-          loading="lazy"
           width={280}
           height={213}
+          sizes="(min-width: 768px) 463px, (min-width: 1280px) 607px"
           className="bg-gray h-[213px] fit-cover md:w-[463px] md:h-[370px] lg:w-[607px] lg:h-[429px]"
         />
         <div
