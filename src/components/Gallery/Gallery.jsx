@@ -2,9 +2,11 @@
 import Section from '../Section';
 import Title from '../Title/Title';
 import GalleryImg from './GalleryImg';
-import { title, gallery } from '../../data/gallery/gallery.json';
 import GallerySwiper from './GallerySwiper';
 import css from './Gallery.module.css';
+
+import galleryData from '../../data/gallery/gallery.json';
+const { title, gallery } = galleryData;
 
 const Gallery = () => {
   return (

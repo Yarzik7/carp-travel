@@ -1,8 +1,10 @@
-import Title from "../Title/Title";
-import Section from "../Section";
-import Text from "../Text/Text";
-import { title, text, slogan } from "../../data/about/about.json";
-import css from "./About.module.css";
+import Title from '../Title/Title';
+import Section from '../Section';
+import Text from '../Text/Text';
+import css from './About.module.css';
+
+import aboutData from '../../data/about/about.json';
+const { title, text, slogan } = aboutData;
 
 const About = () => {
   return (

@@ -1,10 +1,12 @@
-import { gallery } from '../../data/gallery/gallery.json';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import galleryData from '../../data/gallery/gallery.json';
 
 import 'swiper/css';
 import 'swiper/css/keyboard';
+
+const { gallery } = galleryData;
 
 const swiperGallery = [
   ...gallery,

@@ -1,19 +1,16 @@
-"use client";
-import Section from "../Section";
-import Title from "../Title/Title";
-import Text from "../Text/Text";
-import Benefit from "./Benefit";
-import Form from "../Form/Form";
-import Input from "../Form/Input/Input";
-import Checkbox from "../Form/Input/Checkbox";
-import {
-  title,
-  benefits,
-  slogan,
-  formSlogan,
-} from "../../data/career/career.json";
-import css from "./Career.module.css";
-import { useForm } from "react-hook-form";
+'use client';
+import Section from '../Section';
+import Title from '../Title/Title';
+import Text from '../Text/Text';
+import Benefit from './Benefit';
+import Form from '../Form/Form';
+import Input from '../Form/Input/Input';
+import Checkbox from '../Form/Input/Checkbox';
+import css from './Career.module.css';
+import { useForm } from 'react-hook-form';
+
+import careerData from '../../data/career/career.json';
+const { title, benefits, slogan, formSlogan } = careerData;
 
 const Career = () => {
   const {
@@ -21,10 +18,10 @@ const Career = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    mode: "onTouched",
+    mode: 'onTouched',
   });
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = data => console.log(data);
 
   return (
     <Section id="career" sectionClasses={css.careerBgImg}>
@@ -47,9 +44,7 @@ const Career = () => {
                 key={idx}
                 title={title}
                 description={description}
-                titleClasses={
-                  idx === 2 ? "mdOnly:mb-[28px]" : "beforeLg:mb-[8px]"
-                }
+                titleClasses={idx === 2 ? 'mdOnly:mb-[28px]' : 'beforeLg:mb-[8px]'}
               />
             ))}
           </ul>
@@ -73,7 +68,7 @@ const Career = () => {
                   placeholder="John Smith"
                   name="name"
                   register={{
-                    ...register("name", {
+                    ...register('name', {
                       required: true,
                       pattern: /^[A-Za-z\u0080-\uFFFF\- ']+$/i,
                     }),
@@ -86,7 +81,7 @@ const Career = () => {
                   type="email"
                   name="email"
                   register={{
-                    ...register("email", {
+                    ...register('email', {
                       required: true,
                       pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
                     }),
@@ -98,7 +93,7 @@ const Career = () => {
                   placeholder="Movie maker"
                   name="position"
                   register={{
-                    ...register("position", {
+                    ...register('position', {
                       required: true,
                       pattern: /^[A-Za-z\u0080-\uFFFF\- ']+$/i,
                     }),
@@ -111,7 +106,7 @@ const Career = () => {
                   type="tel"
                   name="phone"
                   register={{
-                    ...register("phone", {
+                    ...register('phone', {
                       required: true,
                       pattern: /^[A-Za-z\u0080-\uFFFF\- ']+$/i,
                     }),
@@ -124,14 +119,14 @@ const Career = () => {
                   label="Message"
                   type="textarea"
                   name="message"
-                  register={{ ...register("message", { required: true }) }}
+                  register={{ ...register('message', { required: true }) }}
                   errors={errors.message}
                   inputClasses="h-[196px] md:h-[228px] lg:h-[270px]"
                 />
                 <Checkbox
                   label="I confirm my consent to the processing of personal data."
                   name="agree"
-                  register={{ ...register("agree") }}
+                  register={{ ...register('agree') }}
                   containerClasses="smOnly:my-[16px] md:absolute md:left-[0] -bottom-[12px] md:w-[222px] lg:w-[290px] lg:-bottom-[20px]"
                 />
               </div>

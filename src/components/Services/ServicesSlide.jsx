@@ -1,7 +1,6 @@
 'use client';
 import Container from '../Container';
 import Text from '../Text/Text';
-import { twMerge } from 'tailwind-merge';
 import Image from 'next/image';
 
 const ServicesSlide = ({
@@ -20,14 +19,16 @@ const ServicesSlide = ({
     >
       <Container containerClasses="h-full md:flex mdOnly:gap-[20px] lg:justify-between">
         <h3 className="visually-hidden">{title}</h3>
-        <Image
-          src={src}
-          alt={title}
-          width={280}
-          height={213}
-          sizes="(min-width: 768px) 463px, (min-width: 1280px) 607px"
-          className="bg-gray h-[213px] fit-cover md:w-[463px] md:h-[370px] lg:w-[607px] lg:h-[429px]"
-        />
+        <div className="relative bg-gray h-[213px] md:w-[463px] md:h-[370px] lg:w-[607px] lg:h-[429px]">
+          <Image
+            src={src}
+            alt={title}
+            fill
+            sizes="(min-width: 1280px) 607px, (min-width: 768px) 463px"
+            className="bg-gray fit-cover"
+          />
+        </div>
+
         <div
           style={{ paddingTop }}
           className="services-description-container min-h-[358px] flex flex-col justify-between smOnly:mt-[12px] md:w-[221px] lg:w-[293px]"

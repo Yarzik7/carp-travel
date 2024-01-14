@@ -1,12 +1,14 @@
-"use client";
-import Section from "../Section";
-import Title from "../Title/Title";
-import ContactBlock from "./ContactBlock/ContactBlock";
-import Form from "../Form/Form";
-import Input from "../Form/Input/Input";
-import { phones, emails, socials } from "@/data/contacts";
-import css from "./Contacts.module.css";
-import { useForm } from "react-hook-form";
+'use client';
+import Section from '../Section';
+import Title from '../Title/Title';
+import ContactBlock from './ContactBlock/ContactBlock';
+import Form from '../Form/Form';
+import Input from '../Form/Input/Input';
+import css from './Contacts.module.css';
+import { useForm } from 'react-hook-form';
+
+import { phones, emails, socials } from '@/data/contacts';
+// const { phones, emails, socials } = contactsData;
 
 const Contacts = () => {
   const {
@@ -15,10 +17,10 @@ const Contacts = () => {
     setValue,
     formState: { errors },
   } = useForm({
-    mode: "onTouched",
+    mode: 'onTouched',
   });
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = data => console.log(data);
 
   return (
     <Section id="contacts" sectionClasses={css.contactsBgImg}>
@@ -50,7 +52,7 @@ const Contacts = () => {
                 name="name"
                 placeholder="John Smith"
                 register={{
-                  ...register("name", {
+                  ...register('name', {
                     required: true,
                     pattern: /^[A-Za-z\u0080-\uFFFF\- ']+$/i,
                   }),
@@ -63,7 +65,7 @@ const Contacts = () => {
                 type="email"
                 placeholder="johnsmith@email.com"
                 register={{
-                  ...register("email", {
+                  ...register('email', {
                     required: true,
                     pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
                   }),
@@ -76,7 +78,7 @@ const Contacts = () => {
                 label="Message"
                 name="message"
                 type="textarea"
-                register={{ ...register("message", { required: true }) }}
+                register={{ ...register('message', { required: true }) }}
                 errors={errors.message}
                 inputClasses="h-[193px]"
               />

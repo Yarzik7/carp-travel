@@ -1,17 +1,19 @@
-"use client";
-import Section from "../Section";
-import ServicesSwiper from "./ServicesSwiper";
-import Container from "../Container";
-import ServiceListItem from "./ServiceListItem";
-import { title, servicesList } from "../../data/services/services.json";
-import Title from "../Title/Title";
-import { useState } from "react";
+'use client';
+import Section from '../Section';
+import ServicesSwiper from './ServicesSwiper';
+import Container from '../Container';
+import ServiceListItem from './ServiceListItem';
+import Title from '../Title/Title';
+import { useState } from 'react';
+
+import servicesData from '../../data/services/services.json';
+const { title, servicesList } = servicesData;
 
 const Services = () => {
   const [swiper, setSwiper] = useState(null);
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const handleSwipeSlide = (index) => {
+  const handleSwipeSlide = index => {
     setActiveSlide(index);
     swiper.slideTo(index);
   };
@@ -27,8 +29,7 @@ const Services = () => {
           <Title normalPart={title[0]} boldPart={title[1]} />
           <div className="smOnly:mt-[24px] uppercase lg:w-full">
             <p className="text-[43px] font-thin smOnly:text-right md:text-[67px] mdOnly:leading-[1.16] lg:text-[98px]">
-              0{activeSlide + 1}/
-              <span className="text-white/20">0{servicesList.length}</span>
+              0{activeSlide + 1}/<span className="text-white/20">0{servicesList.length}</span>
             </p>
             <ul className="mt-[289px] flex flex-col gap-[16px] md:mt-[40px] lg:mt-[20px] lg:gap-[24px]">
               {servicesList.map((service, idx) => (

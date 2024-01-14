@@ -1,16 +1,18 @@
-import ServicesSlide from "./ServicesSlide";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { services } from "../../data/services/services.json";
+import ServicesSlide from './ServicesSlide';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   serviceTravelingBgImg,
   serviceClimbingBgImg,
   serviceBallooningBgImg,
   serviceSkydivingBgImg,
   serviceRaftingBgImg,
-} from "./Services.module.css";
-import { EffectFade } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-fade";
+} from './Services.module.css';
+import { EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+
+import servicesData from '../../data/services/services.json';
+const { services } = servicesData;
 
 const servicesBg = [
   serviceTravelingBgImg,
@@ -20,7 +22,7 @@ const servicesBg = [
   serviceRaftingBgImg,
 ];
 
-const ServicesSwiper = ({ activeSlide,setActiveSlide, onInitSwiper }) => {
+const ServicesSwiper = ({ activeSlide, setActiveSlide, onInitSwiper }) => {
   return (
     <div className="services-swiper min-h-full">
       <Swiper
@@ -29,7 +31,7 @@ const ServicesSwiper = ({ activeSlide,setActiveSlide, onInitSwiper }) => {
         effect="fade"
         modules={[EffectFade]}
         onSwiper={onInitSwiper}
-        onSlideChange={(e) => setActiveSlide(e.activeIndex)}
+        onSlideChange={e => setActiveSlide(e.activeIndex)}
         className="h-full"
       >
         {services.map((service, idx) => (

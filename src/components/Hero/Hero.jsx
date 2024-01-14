@@ -1,11 +1,13 @@
-import Link from "next/link";
-import Section from "../Section";
-import { title, places, slogan, description } from "../../data/hero/hero.json";
-import css from "./Hero.module.css";
+import Link from 'next/link';
+import Section from '../Section';
+import css from './Hero.module.css';
+
+import heroData from '../../data/hero/hero.json';
+const { title, places, slogan, description } = heroData;
 
 const Hero = () => {
   return (
-    <Section sectionClasses={[css.heroSection, css.heroBgImg].join(" ")}>
+    <Section sectionClasses={[css.heroSection, css.heroBgImg].join(' ')}>
       <div className="w-full h-full md:relative md:flex justify-between">
         <div className="smOnly:mb-[24px] text-right uppercase md:absolute top-[0px] -right-[14px]">
           <p className="text-[37px] font-thin tracking-[1.65px] leading-none md:text-[67px] md:tracking-[8.71px] lg:text-[98px] lg:tracking-[3px]">
