@@ -23,3 +23,10 @@
     <img src="./public/images/ReadMe/contact-input-validation.JPG" alt="Form validation"/>
   </li>
 </ul>
+
+<h2>Technology Stack</h2>
+
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Swiper](https://img.shields.io/badge/Swiper-gray?style=for-the-badge&logo=swiper&logoColor=0070e4)
+![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
